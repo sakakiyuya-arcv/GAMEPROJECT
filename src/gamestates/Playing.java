@@ -33,7 +33,7 @@ public class Playing extends State implements Statemethods{
 	
 	public Playing(Game game) {
 		super(game);
-		player1Data = PlayerData.WOLF_SAMURAI;
+		player1Data = PlayerData.SAMURAI_2;
 		player2Data = PlayerData.DEMON_SAMURAI;
 		initClasses();
 		

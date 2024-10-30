@@ -33,6 +33,7 @@ public class PlayerData {
 	}
 	public static final PlayerData DEMON_SAMURAI = new PlayerData(LoadSave.DEMON_SAMURAI_ATLAS,(int)(64*1.43*Game.SCALE),(int)(54*1.43*Game.SCALE), 20, 26, 128, 108,(int)(41*1.43),(int)(38*1.43),9f,3.6f);
 	public static final PlayerData WOLF_SAMURAI = new PlayerData(LoadSave.WOLF_SAMURAI_ATLAS, (int)(96*1.43*Game.SCALE),(int)(32*1.43*Game.SCALE), 10, 12, 192, 64,(int)(57*1.43),(int)(21*1.43),7.2f,3.6f);
+	public static final PlayerData SAMURAI_2 = new PlayerData(LoadSave.SAMURAI_2_ATLAS, (int)(80*1.43*Game.SCALE),(int)(34*1.43*Game.SCALE), 10, 11, 250, 110,(int)(53*1.43),(int)(18*1.43),12f,2.275f);
 
 	public static final int IDLE = 0;
 	public static final int RUNNING = 1;
@@ -90,6 +91,28 @@ public class PlayerData {
 			return 8;
 		case FALLING:
 			return 1;
+		}
+		if(playerData == SAMURAI_2)
+			switch (playerAction) {
+			case IDLE:
+				return 5;
+			case RUNNING:
+				return 7;
+			case JUMP:
+				return 3;
+			case HIT:
+				return 3;
+			case ATTACK_1:
+			case ATTACK_2:
+				return 5;
+			case ATTACK_3:
+				return 10;
+			case SPECIAL_ATTACK:
+				return 11;
+			case DEATH:
+				return 10;
+			case FALLING:
+				return 1;
 		}
 		return 1;
 	}	

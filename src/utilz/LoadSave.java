@@ -14,6 +14,7 @@ public class LoadSave {
 //	public static final String PLAYER_ATLAS1 = "player.png";
 	public static final String DEMON_SAMURAI_ATLAS = "demon_samurai.png";
 	public static final String WOLF_SAMURAI_ATLAS = "wolf_samurai.png";
+	public static final String SAMURAI_2_ATLAS = "samurai_2.png";
 	public static final String LEVEL_ATLAS = "outside_sprites.png";
 //	public static final String LEVEL_ATLAS = "Tileset.png";
 //	public static final String LEVEL_ONE_DATA = "level_one_data.png";

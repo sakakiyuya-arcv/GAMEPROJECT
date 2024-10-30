@@ -28,7 +28,7 @@ public class Player extends Entity {
 	private float yDrawOffset;
 	
 	private float airSpeed = 0f;
-	private float gravity = 0.03f*Game.SCALE;
+	private float gravity = 0.04f*Game.SCALE;
 	private float jumpSpeed = -2.5f * Game.SCALE;
 	private float fallSpeedAfterCollision = 0.5f * Game.SCALE;
 	private boolean inAir = false;
@@ -62,7 +62,7 @@ public class Player extends Entity {
 			g.drawImage(animations[playerAction+11][aniIndex], (int)(hitbox.x-xDrawOffset) - lvlOffset + flipX, (int)(hitbox.y-yDrawOffset), width*flipW, height, null);
 		else
 		g.drawImage(animations[playerAction][aniIndex], (int)(hitbox.x-xDrawOffset) - lvlOffset + flipX, (int)(hitbox.y-yDrawOffset), width*flipW, height, null);
-		drawHitBox(g);
+//		drawHitBox(g);
 	}
 
 	private void updateAnimationTick() {
@@ -165,7 +165,7 @@ public class Player extends Entity {
 		if (right) 
 			xSpedd += playerSpeed;
 
-		if(playerData == WOLF_SAMURAI&&playerAction==SPECIAL_ATTACK&&aniIndex>=6&&aniIndex<10) {
+		if(playerAction==SPECIAL_ATTACK&&aniIndex>=6&&(playerData == WOLF_SAMURAI&&aniIndex<10||playerData == SAMURAI_2&&aniIndex<9)) {
 			if(inRight)
 				xSpedd += 1.5 *playerSpeed;
 			else
